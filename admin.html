@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>دخول المدير - تيب توب</title>
+</head>
+<body>
+  <h1>تسجيل دخول المدير</h1>
+  <form onsubmit="return checkLogin()">
+    <label>اسم المستخدم: <input type="text" id="username" required></label><br><br>
+    <label>كلمة المرور: <input type="password" id="password" required></label><br><br>
+    <button type="submit">دخول</button>
+  </form>
+  <p id="error" style="color:red;"></p>
+  <script>
+    function checkLogin() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === 'abas' && pass === 'B7uk21vc') {
+        alert('تم الدخول بنجاح!');
+        return true;
+      } else {
+        document.getElementById('error').textContent = 'بيانات غير صحيحة';
+        return false;
+      }
+    }
+  </script>
+  <br>
+  <a href="index.html">العودة إلى الصفحة الرئيسية</a>
+</body>
+</html>
